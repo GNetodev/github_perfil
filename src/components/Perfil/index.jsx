@@ -6,7 +6,7 @@ const Perfil = ({nomeUsuario}) => {
             <img className={styles.avatar} src={`https://github.com/${nomeUsuario}.png`}/>
             <h1 className={styles.name}>
                 {nomeUsuario}
-                </h1>
+            </h1>
         </header>
     )
 }

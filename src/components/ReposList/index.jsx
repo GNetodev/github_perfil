@@ -5,6 +5,7 @@ const ReposList = ({nomeUsuario}) => {
 
 const [repos, setRepos] = useState([]);
 const [estaCarregando, setEstaCarregando] = useState(true);
+const [deuErro, setDeuErro] = useState(true);
 
 useEffect(() => {
     setEstaCarregando(true);
@@ -17,6 +18,10 @@ useEffect(() => {
             setEstaCarregando(false);
             setRepos(respostaJson);
         },1500);
+    })
+
+    .catch(e => {
+        setDeuErro(true);
     })
 },[nomeUsuario])
 
